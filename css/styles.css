@@ -437,7 +437,7 @@ nav ul.open {
   background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
   padding: 1rem;
   text-align: center;
-  color: #e9cb06; 
+  color: #78201c; /* maroon red */
   font-size: 2rem;
   font-family: "Barlow", sans-serif;
   text-transform: uppercase;
