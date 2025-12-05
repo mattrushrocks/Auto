@@ -1,0 +1,268 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $fontColor;
+}
+
+#headerWrapper {
+background: rgb(126,217,87);
+background: white;
+  color: #3F4A5A;
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: flex-end;
+  padding: 1rem $gutter;
+  gap: 8px;
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+      font-family: "Caveat Brush", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+
+}
+
+h2 {
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+
+  a {
+      text-decoration: none;
+  }
+}
+
+/*Navigation stuff goes here*/
+
+#navWrapper {
+  background-color: $menuColor;
+}
+
+nav {
+
+  button{
+    padding: .5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: rgba(255,255,255, 0.9);
+  }
+
+
+button span:nth-child(1){display:block;}
+button span:nth-child(2){display:none;}
+button.open span:nth-child(1){display:none;}
+button.open span:nth-child(2){display:block;}
+
+
+
+  ul {
+    display:none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-top: solid 1px rgba(255,255,255, 0.3);
+    li {
+      border-bottom: solid 1px rgba(255,255,255, 0.3);
+
+      a {
+        display: block;
+        padding: 0.75rem;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        &:hover {
+          background-color: darken($menuColor, 4%);
+          color: orange;
+        }
+      }
+    }
+    li.active a {
+        background-color: darken($menuColor, 8%);
+    }
+  }
+  ul.open {
+    display: block;
+  }
+}
+
+
+
+.parentHero {
+  margin-bottom: 1rem;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  p{
+    position: absolute;
+    margin: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+padding: 1rem;
+text-align: center;
+color: white;
+font-size: 2rem;
+font-family: "Caveat Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+
+
+#mainWrapper main {
+  font-family: 'Kaushan Script', cursive;
+  color:#C1121F;
+  margin: auto;
+  padding: 2rem;
+}
+
+.cardWrapper {
+  display: grid;    
+  grid-template-columns: 1fr;
+  gap: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  .showCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid black;
+      border-radius: 8px;
+      img {
+          display: block;
+          height: auto;
+          width: 100px;
+          margin: auto;
+          margin-top: 25px;
+          border-radius: 8px 8px 0px 0px;
+          
+      }
+      div {
+          background-color: #3F4A5A;
+          border-radius: 0px 0px 7px 7px;
+          padding: 5px;
+          &:hover {
+            cursor: pointer;
+            color: yellow;
+          }
+      }
+      p{
+        color: black;
+        padding: 1rem;
+      }
+  }
+}
+
+.bounce:hover img {
+  animation: bounce 1s 1;
+}
+
+.flip:hover img {
+  backface-visibility: visible !important;
+  animation: flip 2s ease 1;
+}
+
+.pulse:hover img {
+  animation: pulse 1s 2 ease-in-out alternate;
+}
+
+.shake:hover img {
+  animation: shake 2s ease 1;
+}
+
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+@keyframes pulse {
+  from { transform: scale(0.8); }
+  to { transform: scale(1.2); }
+}
+
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(400px) rotateY(360deg) scale(.95);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(400px) scale(1);
+		animation-timing-function: ease-in;
+	}
+}
+
+@keyframes bounce {
+  0% { transform:translateY(0%); }
+  25% { transform:translateY(-15%); }
+  50% { transform:translateY(0%); }
+  75% { transform:translateY(-7%); }
+  100% { transform:translateY(0%); }
+}
+
+#customerQuotes div{
+  border: 1px solid black;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  color: black;
+}
+
+
+// begin the footer
+
+#footerWrapper {
+background: black;
+color: white;
+}
+footer {
+    padding: 0.5rem $gutter;
+    p{
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+    }
+}

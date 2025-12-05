@@ -1,0 +1,10 @@
+header {
+    padding: 2rem $gutter;
+    h1 {font-size: 2rem;}
+    img {width: 75px; height: 75px;}
+}
+
+
+.cardWrapper {
+    grid-template-columns: 1fr 1fr;
+}

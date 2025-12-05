@@ -1,0 +1,22 @@
+@import "normalize";
+
+@import "variables";
+
+@import "small";
+
+:root {
+  --tan-light: #F4E4C1;
+  --tan-dark: #E3C99A;
+  --black: #1A1A1A;
+  --brown: #5C4630;
+  --text-light: #FAF9F6;
+}
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+}
+// end of a media query
+
+@media only screen and (min-width: 60rem) {
+    @import "large";
+}
+// end of a media query 
