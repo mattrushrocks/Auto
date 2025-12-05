@@ -578,7 +578,7 @@ nav ul.open {
 
 #footerWrapper {
   background: #000000;
-  color: #fafafa; /* maroon red */
+  color: #FFFFFF; /* footer text is now white */
 }
 
 footer {
@@ -588,6 +588,7 @@ footer p {
   margin: 0;
   font-weight: 300;
   text-align: center;
+  color: #FFFFFF; /* ensure footer paragraph text is white */
 }
 
 @media only screen and (min-width: 35rem) {
