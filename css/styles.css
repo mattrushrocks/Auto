@@ -335,7 +335,7 @@ body {
 
 #headerWrapper {
   background: #bcb7b7; /* steel gray */
-  color: #FFD700; /* mechanic yellow */
+  color: #78201c; /* maroon red */
 }
 
 header {
@@ -353,6 +353,7 @@ header h1 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #78201c; /* maroon red */
 }
 
 h2 {
@@ -361,7 +362,7 @@ h2 {
   text-align: center;
   font-family: "Barlow", sans-serif;
   text-transform: uppercase;
-  color: #FFD700;
+  color: #78201c;
 }
 h2 a {
   text-decoration: none;
@@ -411,7 +412,7 @@ nav ul li a {
   font-weight: 600;
 }
 nav ul li a:hover {
-  background-color: #FFD700; /* hazard yellow */
+  background-color: #78201c; /* maroon red */
   color: black;
 }
 nav ul li.active a {
@@ -436,9 +437,9 @@ nav ul.open {
   background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
   padding: 1rem;
   text-align: center;
-  color: #FFD700;
+  color: #e9cb06; 
   font-size: 2rem;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Barlow", sans-serif;
   text-transform: uppercase;
   bottom: 0;
   width: 100%;
@@ -462,9 +463,9 @@ nav ul.open {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid #FFD700; /* hazard yellow border */
+  border: 2px solid #78201c; /* maroon red border */
   border-radius: 8px;
-  background-color: #cd9292; /* steel panel */
+  background-color: #833434; /* steel panel */
   box-shadow: inset 0 0 10px #000000;
 }
 .cardWrapper .showCard img {
@@ -482,7 +483,7 @@ nav ul.open {
 }
 .cardWrapper .showCard div:hover {
   cursor: pointer;
-  color: #FFD700;
+  color: #78201c; /* maroon red */
 }
 .cardWrapper .showCard p {
   color: #E0E0E0;
@@ -565,7 +566,7 @@ nav ul.open {
   }
 }
 #customerQuotes div {
-  border: 2px solid #FFD700;
+  border: 2px solid #78201c; /* maroon red */
   width: 100%;
   min-height: 50px;
   margin-top: 16px;
@@ -577,7 +578,7 @@ nav ul.open {
 
 #footerWrapper {
   background: #000000;
-  color: #FFD700;
+  color: #78201c; /* maroon red */
 }
 
 footer {
@@ -626,13 +627,13 @@ footer p {
   }
   /* Style for clickable phone numbers */
   a[href^="tel"] {
-  color: #00FF7F; /* bright spring green, high contrast on dark backgrounds */
-  font-weight: 700;
-  text-decoration: none;
+    color: #00FF7F; /* bright spring green, high contrast on dark backgrounds */
+    font-weight: 700;
+    text-decoration: none;
   }
 
   a[href^="tel"]:hover {
-  color: #FFD700; /* hazard yellow on hover */
-  text-decoration: underline;
+    color: #78201c; /* maroon red hover */
+    text-decoration: underline;
   }
 }
