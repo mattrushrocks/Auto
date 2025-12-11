@@ -638,3 +638,16 @@ footer p {
     text-decoration: underline;
   }
 }
+.reviewStars {
+    color: #FFD700; /* gold for filled stars */
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.reviewStars span {
+    color: #ccc; /* gray for empty stars */
+    font-weight: bold;
+}
+
+
+
